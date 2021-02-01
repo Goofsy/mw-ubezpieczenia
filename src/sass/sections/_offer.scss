@@ -1,10 +1,6 @@
-.offer {
+#offer {
   min-height: 100vh;
-
-  .title {
-    background-color: green;
-    height: 100px;
-  }
+  background-color: $medium-color;
 
   .cards {
     padding: 2.1rem;

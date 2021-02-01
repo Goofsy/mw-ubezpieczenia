@@ -1,7 +1,6 @@
 // Base
 @import './base/variables';
 @import './base/base';
-@import './base/layout';
 @import './base/reset';
 
 // Sections
@@ -12,3 +11,9 @@
 
 // Components
 @import './components/navbar';
+@import './components/button';
+@import './components/overlay';
+@import './components/sidebar';
+
+@import './layout/layout';
+@import './layout/media';

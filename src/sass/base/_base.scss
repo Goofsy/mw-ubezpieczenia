@@ -1,5 +1,6 @@
 body {
   font-family: 'Montserrat', sans-serif;
+  position: relative;
 }
 
 .container {
@@ -8,4 +9,14 @@ body {
   margin: auto;
   overflow: hidden;
   height: 100%;
+  position: relative;
+}
+
+.subtitle {
+  color: $dark-color;
+  font-size: 2.8rem;
+  padding-top: 2rem;
+  border-bottom: 3px solid $primary-color;
+  display: inline-block;
+  text-align: center;
 }

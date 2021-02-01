@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/sass/main.scss" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
       rel="stylesheet"
     />
     <script
@@ -16,26 +16,67 @@
     <title>MW-Ubezpieczenia</title>
   </head>
   <body>
-    <header class="header">
+    <header id="header">
       <nav class="navbar">
-        <div class="logo">logo</div>
-        <ul class="hamburger">
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-        <ul class="nav">
-          <li class="nav__link">Strona głowna</li>
-          <li class="nav__link">Oferta</li>
-          <li class="nav__link">O nas</li>
-          <li class="nav__link">Kontakt</li>
-        </ul>
+        <div class="container">
+          <div class="logo">logo</div>
+          <ul class="hamburger">
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <ul class="nav">
+            <li class="nav__item">
+              <a class="nav__item--link active" href="#header">Strona głowna</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__item--link" href="#offer">Oferta</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__item--link" href="#about">O nas</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__item--link" href="#contact">Kontakt</a>
+            </li>
+          </ul>
+        </div>
       </nav>
-      <div class="content"></div>
+
+      <div class="sidebar hidden">
+        <div class="logo">logo</div>
+        <ul class="nav">
+          <li class="nav__item">
+            <a class="nav__item--link" href="#header">Strona głowna</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__item--link" href="#offer">Oferta</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__item--link" href="#about">O nas</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__item--link" href="#contact">Kontakt</a>
+          </li>
+        </ul>
+      </div>
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="content">
+          <div class="desc">
+            <h1 class="desc__title">MW Ubezpieczenia</h1>
+            <h2 class="desc__info">
+              Znajdź dla siebie idealne ubezpieczenie w placówce lub przez
+              telefon
+            </h2>
+            <a href="#offer" class="btn btn--primary">Dowiedz się więcej</a>
+          </div>
+          <img src="./src/images/bg-ppl.svg" class="img" />
+        </div>
+      </div>
     </header>
-    <div class="container">
-      <section class="offer">
-        <h2 class="title">Oferta</h2>
+    <section id="offer">
+      <div class="container">
+        <h2 class="subtitle">Oferta</h2>
         <div class="cards">
           <div class="card card--1">card1</div>
           <div class="card card--2">card2</div>
@@ -45,23 +86,23 @@
           <div class="card card--6">card6</div>
         </div>
         <div class="partners">partnerzy</div>
-      </section>
-      <section class="about">
-        <div class="title">O nas</div>
-        <div class="content">
-          <div class="img">zdjecie</div>
-          <div class="desc">opis</div>
-        </div>
-      </section>
-      <footer class="contact">
-        <div class="title">Kontakt</div>
-        <div class="content">
-          <div class="info">info</div>
-          <div class="form">form</div>
-          <div class="open-hours">open hours</div>
-          <div class="map">mapa</div>
-        </div>
-      </footer>
-    </div>
+      </div>
+    </section>
+    <section id="about">
+      <div class="subtitle">O nas</div>
+      <div class="content">
+        <div class="img">zdjecie</div>
+        <div class="desc">opis</div>
+      </div>
+    </section>
+    <footer id="contact">
+      <div class="subtitle">Kontakt</div>
+      <div class="content">
+        <div class="info">info</div>
+        <div class="form">form</div>
+        <div class="open-hours">open hours</div>
+        <div class="map">mapa</div>
+      </div>
+    </footer>
   </body>
 </html>

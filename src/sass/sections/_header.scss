@@ -1,10 +1,33 @@
-.header {
+#header {
   max-height: 100vh;
   height: 100vh;
-  position: relative;
+  background: $bg-circles no-repeat 100% 0;
 
   .content {
-    background-color: lightblue;
     height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .desc {
+      width: 50%;
+
+      &__title {
+        font-size: 4rem;
+        font-weight: bold;
+        color: $primary-color;
+      }
+
+      &__info {
+        overflow-wrap: break-word;
+        margin: 1.5rem 3px;
+        max-width: 31rem;
+      }
+    }
+
+    .img {
+      width: 50%;
+      height: 100%;
+    }
   }
 }

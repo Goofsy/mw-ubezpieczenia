@@ -2,25 +2,43 @@
   top: 0;
   height: 80px;
   width: 100%;
-  padding: 0 1rem;
   position: fixed;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-end;
+  z-index: 300;
 
-  .hamburger {
-    display: none;
-    padding: 0.5rem;
-    li {
-      width: 35px;
-      height: 5px;
-      background-color: black;
-      margin: 6px 0;
-    }
-  }
-
-  .nav {
+  .container {
     display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    .hamburger {
+      display: none;
+      li {
+        width: 35px;
+        height: 5px;
+        background-color: $dark-color;
+        margin: 6px 0;
+      }
+    }
+
+    .nav {
+      display: flex;
+
+      .active {
+        color: $primary-color;
+      }
+
+      &__item {
+        &--link {
+          color: black;
+          font-size: 24px;
+          cursor: pointer;
+          transition: 0.2s color ease-in;
+          margin: 0 0.8rem;
+
+          &:hover {
+            color: $primary-color;
+          }
+        }
+      }
+    }
   }
 }
