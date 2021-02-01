@@ -14,11 +14,12 @@ class Navbar {
     this.closeSidebarByLink();
     this.stickyNavbar();
     this.addClassOnScrollHandler();
+    this.smoothScroll();
   }
 
   addClassOnScroll = function () {
     const windowTop = $(window).scrollTop();
-    $('[id]').each(function (index, elem) {
+    $('[id]').each(function (_, elem) {
       const offsetTop = $(elem).offset().top;
       const outerHeight = $(this).outerHeight(true);
       if (windowTop > offsetTop - 500 && windowTop < offsetTop + outerHeight) {
@@ -35,15 +36,17 @@ class Navbar {
     });
   };
 
-  smoothBar = $(document).on('click', 'a[href^="#"]', function (e) {
-    e.preventDefault();
-    $('html, body').animate(
-      {
-        scrollTop: $($.attr(this, 'href')).offset().top,
-      },
-      500
-    );
-  });
+  smoothScroll = () => {
+    $(document).on('click', 'a[href^="#"]', function (e) {
+      e.preventDefault();
+      $('html, body').animate(
+        {
+          scrollTop: $($.attr(this, 'href')).offset().top - 75,
+        },
+        500
+      );
+    });
+  };
 
   stickyNavbar = () => {
     window.addEventListener('scroll', () => {

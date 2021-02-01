@@ -1,17 +1,9 @@
 #offer {
-  min-height: 100vh;
   background-color: $medium-color;
-
-  .cards {
-    padding: 2.1rem;
-
-    .card {
-      height: 310px;
-    }
-  }
 
   .partners {
     background-color: blue;
-    height: 150px;
+    height: 100px;
+    margin-bottom: 3rem;
   }
 }
