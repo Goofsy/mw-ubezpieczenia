@@ -21,7 +21,7 @@
       'card5 card6';
   }
 
-  .contact .content {
+  #contact .content {
     grid-template-areas:
       'info'
       'open-hours'
@@ -31,20 +31,20 @@
 }
 
 @media (max-width: 700px) {
-  .offer .cards {
+  #offer .cards {
     grid-template-areas:
       'card1' 'card2'
       'card3' 'card4'
       'card5' 'card6';
   }
 
-  .about .content .img {
+  #about .content .img {
     display: none;
   }
 
   #header {
     .navbar {
-      padding: 0 1rem;
+      padding: 1.8rem 1rem;
 
       .nav {
         display: none;

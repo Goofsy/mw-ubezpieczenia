@@ -1,9 +1,10 @@
 .navbar {
+  position: absolute;
   top: 0;
-  height: 80px;
+  height: 100px;
   width: 100%;
-  position: fixed;
-  z-index: 300;
+  z-index: 250;
+  transition: all 0.5s ease;
 
   .container {
     display: flex;
@@ -21,6 +22,7 @@
 
     .nav {
       display: flex;
+      padding-bottom: 1rem;
 
       .active {
         color: $primary-color;
@@ -31,7 +33,7 @@
           color: black;
           font-size: 24px;
           cursor: pointer;
-          transition: 0.2s color ease-in;
+          transition: 0.2s all ease-in;
           margin: 0 0.8rem;
 
           &:hover {
@@ -41,4 +43,9 @@
       }
     }
   }
+}
+
+.sticky {
+  position: fixed;
+  background-color: $light-color;
 }
