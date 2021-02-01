@@ -1,0 +1,26 @@
+.navbar {
+  top: 0;
+  height: 80px;
+  width: 100%;
+  padding: 0 1rem;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  .hamburger {
+    display: none;
+    padding: 0.5rem;
+    li {
+      width: 35px;
+      height: 5px;
+      background-color: black;
+      margin: 6px 0;
+    }
+  }
+
+  .nav {
+    display: flex;
+  }
+}

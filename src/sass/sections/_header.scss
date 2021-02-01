@@ -1,0 +1,10 @@
+.header {
+  max-height: 100vh;
+  height: 100vh;
+  position: relative;
+
+  .content {
+    background-color: lightblue;
+    height: 100%;
+  }
+}

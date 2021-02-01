@@ -1,3 +1,14 @@
 // Base
 @import './base/variables';
+@import './base/base';
+@import './base/layout';
 @import './base/reset';
+
+// Sections
+@import './sections/offer';
+@import './sections/header';
+@import './sections/about';
+@import './sections/contact';
+
+// Components
+@import './components/navbar';

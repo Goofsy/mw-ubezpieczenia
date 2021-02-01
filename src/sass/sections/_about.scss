@@ -1,0 +1,21 @@
+.about {
+  .title {
+    height: 100px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: row;
+    .img {
+      flex-grow: 1;
+      height: 550px;
+      background-color: lightcoral;
+    }
+
+    .desc {
+      flex-grow: 1;
+      height: 550px;
+      background-color: aquamarine;
+    }
+  }
+}

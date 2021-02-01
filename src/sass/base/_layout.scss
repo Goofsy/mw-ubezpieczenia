@@ -1,0 +1,105 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 300px);
+  grid-template-areas:
+    ' card1 card2 card3 '
+    ' card4 card5 card6 ';
+  grid-gap: 2rem;
+  justify-content: center;
+
+  .card {
+    background-color: red;
+
+    &--1 {
+      grid-area: card1;
+    }
+
+    &--2 {
+      grid-area: card2;
+    }
+
+    &--3 {
+      grid-area: card3;
+    }
+
+    &--4 {
+      grid-area: card4;
+    }
+
+    &--5 {
+      grid-area: card5;
+    }
+
+    &--6 {
+      grid-area: card6;
+    }
+  }
+}
+
+.contact .content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  grid-template-areas:
+    'info open-hours'
+    'info map'
+    'form map'
+    'form map'
+    'form map';
+
+  .info {
+    grid-area: info;
+  }
+
+  .form {
+    grid-area: form;
+  }
+
+  .open-hours {
+    grid-area: open-hours;
+  }
+
+  .map {
+    grid-area: map;
+  }
+}
+
+@media (max-width: 1090px) {
+  .cards {
+    grid-template-areas:
+      'card1 card2'
+      'card3 card4'
+      'card5 card6';
+  }
+
+  .contact .content {
+    grid-template-areas:
+      'info'
+      'open-hours'
+      'form'
+      'map';
+  }
+}
+
+@media (max-width: 700px) {
+  .offer .cards {
+    grid-template-areas:
+      'card1' 'card2'
+      'card3' 'card4'
+      'card5' 'card6';
+  }
+
+  .about .content .img {
+    display: none;
+  }
+
+  .header .navbar {
+    .nav {
+      display: none;
+    }
+
+    .hamburger {
+      display: block;
+    }
+  }
+}
