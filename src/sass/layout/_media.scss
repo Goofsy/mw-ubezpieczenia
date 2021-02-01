@@ -1,4 +1,4 @@
-@media (max-width: 1090px) {
+@media (max-width: 1020px) {
   #header .content {
     .desc {
       text-align: center;
@@ -14,11 +14,17 @@
     }
   }
 
-  .cards {
-    grid-template-areas:
-      'card1 card2'
-      'card3 card4'
-      'card5 card6';
+  #offer {
+    .cards {
+      grid-template-areas:
+        'card1 card2'
+        'card3 card4'
+        'card5 card6';
+    }
+
+    .partners {
+      width: 100%;
+    }
   }
 
   #contact .content {
@@ -30,7 +36,7 @@
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 680px) {
   #offer .cards {
     grid-template-areas:
       'card1' 'card2'

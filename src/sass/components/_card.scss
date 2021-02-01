@@ -1,5 +1,5 @@
 .cards {
-  padding: 3rem;
+  padding: 3rem 0;
   position: relative;
 
   .card-container {
@@ -19,7 +19,8 @@
       transform-style: preserve-3d;
       transition: all 0.5s ease;
 
-      &--front {
+      &--front,
+      &--back {
         position: absolute;
         width: 100%;
         height: 100%;
@@ -55,15 +56,9 @@
       }
 
       &--back {
-        position: absolute;
-        width: 100%;
-        height: 100%;
         background-color: $primary-color;
         color: $light-color;
-        backface-visibility: hidden;
-        border-radius: 10px;
-        padding: 1.3rem 2rem;
-        box-shadow: 3px 5px 10px rgba($color: #000000, $alpha: 0.25);
+        text-align: start;
 
         transform: rotateY(180deg);
 
