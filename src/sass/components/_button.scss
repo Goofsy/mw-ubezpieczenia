@@ -16,5 +16,10 @@
       background-color: $primary-color;
       color: $light-color;
     }
+
+    &:focus {
+      background-color: transparent;
+      color: $dark-color;
+    }
   }
 }

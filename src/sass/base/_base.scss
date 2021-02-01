@@ -19,3 +19,8 @@ body {
   border-bottom: 3px solid $primary-color;
   display: inline-block;
 }
+
+.hidden {
+  opacity: 0;
+  transform: translateX(100%);
+}

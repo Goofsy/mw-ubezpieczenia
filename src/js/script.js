@@ -45,23 +45,26 @@ class Navbar {
     );
   });
 
-  // Sticky navbar
   stickyNavbar = () => {
     window.addEventListener('scroll', () => {
       const offerTopPosition = this.offer.getBoundingClientRect().top;
-      console.log(offerTopPosition, window.scrollY);
       this.navbar.classList.toggle('sticky', offerTopPosition < 80);
     });
   };
 
-  // Sidebar
   closeSidebar() {
-    this.overlay.style.display = 'none';
+    this.overlay.classList.add('hidden');
     this.sidebar.classList.add('hidden');
+    const scrollY = document.body.style.top;
+    document.body.style.position = '';
+    document.body.style.top = '';
+    window.scrollTo(0, parseInt(scrollY || '0') * -1);
   }
 
   openSidebar() {
-    this.overlay.style.display = 'block';
+    document.body.style.top = `-${window.scrollY}px`;
+    document.body.style.position = 'fixed';
+    this.overlay.classList.remove('hidden');
     this.sidebar.classList.remove('hidden');
   }
 

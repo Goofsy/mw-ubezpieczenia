@@ -8,6 +8,8 @@
   right: 0;
   transition: all 0.4s ease-out;
 
+  overflow: auto;
+
   .nav {
     display: flex;
     flex-direction: column;
@@ -33,9 +35,4 @@
       }
     }
   }
-}
-
-.hidden {
-  opacity: 0;
-  transform: translateX(100%);
 }
