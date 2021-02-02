@@ -66,13 +66,28 @@
     .info,
     .open-hours {
       justify-self: center;
+      text-align: center;
     }
     .desc-title {
       text-align: center;
     }
+    .info {
+      i {
+        display: none;
+      }
+      &__box {
+        display: block !important;
+      }
+    }
     .open-hours {
       margin: 0 0 1rem 0;
-      text-align: center;
+    }
+
+    .form {
+      .btn--primary--form {
+        display: block;
+        width: 100%;
+      }
     }
   }
 
