@@ -93,7 +93,7 @@
 
   #home {
     .navbar {
-      padding: 1rem;
+      padding: 0.7rem;
       height: 80px;
 
       .container {
@@ -103,7 +103,7 @@
       .logo {
         margin: 0;
         height: 100%;
-        width: 48px;
+        width: 56px;
       }
 
       .nav {
@@ -112,6 +112,7 @@
 
       .hamburger {
         display: block;
+        margin-bottom: 0.25rem;
       }
     }
   }
