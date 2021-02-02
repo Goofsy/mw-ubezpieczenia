@@ -96,8 +96,14 @@
       padding: 1rem;
       height: 80px;
 
-      .logo {
+      .container {
         padding: 0;
+      }
+
+      .logo {
+        margin: 0;
+        height: 100%;
+        width: 48px;
       }
 
       .nav {

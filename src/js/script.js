@@ -22,7 +22,7 @@ class Navbar {
     $('[id]').each(function (_, elem) {
       const offsetTop = $(elem).offset().top;
       const outerHeight = $(this).outerHeight(true);
-      if (windowTop > offsetTop - 500 && windowTop < offsetTop + outerHeight) {
+      if (windowTop > offsetTop - 80 && windowTop < offsetTop + outerHeight) {
         const elemId = $(elem).attr('id');
         $('nav ul li a.active').removeClass('active');
         $("nav ul li a[href='#" + elemId + "']").addClass('active');
