@@ -34,7 +34,7 @@
   }
 }
 
-#contact .content {
+#contact .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
 
@@ -44,12 +44,13 @@
     'form map'
     'form map'
     'form map';
+  grid-gap: 2.5rem;
 
   .info {
     grid-area: info;
   }
 
-  .form {
+  .form-container {
     grid-area: form;
   }
 

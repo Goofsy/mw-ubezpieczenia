@@ -8,6 +8,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500"
       rel="stylesheet"
     />
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script
       src="https://kit.fontawesome.com/7b33546b62.js"
       crossorigin="anonymous"
@@ -252,10 +253,101 @@
     </section>
     <footer id="contact">
       <div class="subtitle">Kontakt</div>
-      <div class="content">
-        <div class="info">info</div>
-        <div class="form">form</div>
-        <div class="open-hours">open hours</div>
+      <div class="container">
+        <div class="info">
+          <h3 class="desc-title">Dane Kontaktowe</h3>
+          <div class="info__box">
+            <i class="fas fa-building"></i>
+            <span>
+              <p class="company-name">MW UBEZPIECZENIA</p>
+              <p>Małgorzata Wielopolska</p>
+            </span>
+          </div>
+          <div class="info__box">
+            <i class="fas fa-phone"></i>
+            <p>662 124 373</p>
+          </div>
+          <div class="info__box">
+            <i class="fas fa-envelope"></i>
+            <p>biuro@mwubezpieczenia.com</p>
+          </div>
+          <div class="info__box">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>
+              <p>32-700 Bochnia</p>
+              <p>ul. Trinitatis 34a</p>
+            </span>
+          </div>
+        </div>
+        <div class="form-container">
+          <h3 class="desc-title">Napisz do nas</h3>
+          <form class="form" novalidate>
+            <div class="form__group">
+              <input
+                class="form__group__input"
+                id="name"
+                type="text"
+                name="name"
+                autocomplete="off"
+              />
+              <label for="name" class="form__group__label">
+                <span class="form__group__label__text">Imię</span>
+              </label>
+            </div>
+            <div class="form__group">
+              <input
+                class="form__group__input"
+                id="email"
+                type="email"
+                name="email"
+                autocomplete="off"
+              />
+              <label for="email" class="form__group__label">
+                <span class="form__group__label__text">E-mail</span>
+              </label>
+            </div>
+            <div class="form__group">
+              <input
+                class="form__group__input"
+                id="phone"
+                type="number"
+                type="number"
+                name="phone"
+                autocomplete="off"
+              />
+              <label for="phone" class="form__group__label">
+                <span class="form__group__label__text">Telefon</span>
+              </label>
+            </div>
+            <div class="form__group">
+              <textarea
+                class="form__group__input"
+                id="message"
+                type="text"
+                name="message"
+                rows="4"
+              ></textarea>
+              <label for="message" class="form__group__label">
+                <span class="form__group__label__text">Wiadomość</span>
+              </label>
+            </div>
+            <div class="form__spinner">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+
+            <p class="form__info"></p>
+
+            <button class="btn btn--primary btn--primary--form">Wyślij</button>
+          </form>
+        </div>
+        <div class="open-hours">
+          <div class="desc-title">Godziny otwarcia</div>
+          <p>pon-pt 8:00-16:00</p>
+          <p>sobta 8:00-14:00</p>
+        </div>
         <div class="map">mapa</div>
       </div>
     </footer>

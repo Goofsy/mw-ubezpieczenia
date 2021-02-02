@@ -1,10 +1,52 @@
 #contact {
-  height: 600px;
   background-color: $medium-color;
-  .title {
-    height: 100px;
+
+  .subtitle {
+    width: 180px;
   }
 
-  .content {
+  .container {
+    padding-bottom: 3rem;
+
+    .desc-title {
+      font-size: 1.5rem;
+    }
+
+    .info {
+      margin-top: 2.5rem;
+
+      .desc-title {
+        margin-bottom: 1.5rem;
+      }
+
+      .company-name {
+        font-weight: bold;
+      }
+      .info__box {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+
+        i {
+          width: 40px;
+          color: $primary-color;
+          font-size: 1.9rem;
+        }
+
+        p {
+          margin-bottom: 5px;
+          color: $dark-color;
+          font-size: 1.1rem;
+        }
+      }
+    }
+
+    .open-hours {
+      margin-top: 2.5rem;
+      .desc-title {
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+    }
   }
 }
