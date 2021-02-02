@@ -10,14 +10,12 @@
 
     .desc-title {
       font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 0.8rem;
     }
 
     .info {
       margin-top: 2.5rem;
-
-      .desc-title {
-        margin-bottom: 1.5rem;
-      }
 
       .company-name {
         font-weight: bold;
@@ -43,9 +41,30 @@
 
     .open-hours {
       margin-top: 2.5rem;
-      .desc-title {
-        font-weight: bold;
-        margin-bottom: 1rem;
+    }
+  }
+
+  .form-container {
+    .desc-title {
+      margin: 0;
+    }
+  }
+
+  .map-container {
+    height: 500px;
+
+    .map {
+      width: 100%;
+      height: 100%;
+      &__info {
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 0.9rem;
+
+        &__link {
+          color: $primary-color;
+          font-weight: bold;
+        }
       }
     }
   }

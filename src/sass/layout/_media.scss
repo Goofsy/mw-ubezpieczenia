@@ -44,6 +44,10 @@
       '. .'
       'form form'
       'map map';
+
+    .map-container {
+      margin: 1rem 0;
+    }
   }
 }
 
@@ -53,6 +57,19 @@
       'card1' 'card2'
       'card3' 'card4'
       'card5' 'card6';
+
+    .card--front:hover {
+      color: $dark-color;
+      background-color: $light-color;
+
+      .card--front__details {
+        color: $primary-color;
+      }
+
+      .card--front__icon {
+        color: $primary-color;
+      }
+    }
   }
 
   #contact .container {
@@ -88,6 +105,10 @@
         display: block;
         width: 100%;
       }
+    }
+
+    .map-container {
+      height: 400px;
     }
   }
 

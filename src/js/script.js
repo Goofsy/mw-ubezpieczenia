@@ -1,6 +1,7 @@
 import 'core-js';
 import 'regenerator-runtime/runtime';
 import $ from 'jquery';
+import { Loader } from '@googlemaps/js-api-loader';
 
 class Cards {
   _cards = document.querySelector('.cards');
@@ -253,7 +254,7 @@ new SendEmail();
 
 class InfiniteSlider {
   constructor(
-    animTime = '10000',
+    animTime = '14000',
     selector = '.slider',
     container = '#slider-container'
   ) {
@@ -410,3 +411,47 @@ document.addEventListener('DOMContentLoaded', function () {
     setTimeout(slider.ie11Fix.bind(slider), 1000);
   }
 });
+
+class Map {
+  loader = new Loader({
+    apiKey: 'AIzaSyBjQKGHd-2F-00gM3vx-ugMwafHitZjzdg',
+    version: 'weekly',
+  });
+  map;
+  location = { lat: 49.972862, lng: 20.409 };
+  contentString =
+    '<div class="map__info">' +
+    '<p>ul. Trinitatis 34a</p>' +
+    '<p>32-700 Bochnia</p>' +
+    '<a class="map__info__link" href="https://www.google.com/maps/dir/Trinitatis+34A,+32-700+Bochnia//@49.9723755,20.4089502,17z/data=!4m9!4m8!1m5!1m1!1s0x47163b3fbafab067:0x6e2b3d0ecdaadcca!2m2!1d20.409036!2d49.972862!1m0!3e0">Wyznacz trasę</a>' +
+    '</div>';
+
+  constructor() {
+    this.loadMap();
+  }
+
+  loadMap() {
+    this.loader.load().then(() => {
+      this.map = new google.maps.Map(document.querySelector('.map'), {
+        center: this.location,
+        zoom: 14,
+      });
+
+      const marker = new google.maps.Marker({
+        position: this.location,
+        map: this.map,
+      });
+
+      const infowindow = new google.maps.InfoWindow({
+        content: this.contentString,
+      });
+
+      marker.addListener('click', () => {
+        infowindow.open(this.map, marker);
+      });
+
+      infowindow.open(this.map, marker);
+    });
+  }
+}
+new Map();

@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.1",
+    "@googlemaps/js-api-loader": "^1.11.1",
     "autoprefixer": "^9.3.1",
     "core-js": "^2.6.12",
     "jquery": "^3.5.1",
