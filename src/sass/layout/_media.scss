@@ -27,6 +27,17 @@
     }
   }
 
+  #about .content {
+    .img {
+      display: none;
+    }
+    .desc {
+      width: 100%;
+      text-align: center;
+      padding: 0;
+    }
+  }
+
   #contact .content {
     grid-template-areas:
       'info'
@@ -42,10 +53,6 @@
       'card1' 'card2'
       'card3' 'card4'
       'card5' 'card6';
-  }
-
-  #about .content .img {
-    display: none;
   }
 
   #header {

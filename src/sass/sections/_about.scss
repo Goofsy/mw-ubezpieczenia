@@ -1,21 +1,29 @@
 #about {
-  .title {
-    height: 100px;
+  .subtitle {
+    width: 133px;
+    padding-top: 2rem;
   }
-
   .content {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    position: relative;
+    padding: 2.5rem 0 3rem 0;
+
     .img {
-      flex-grow: 1;
-      height: 550px;
-      background-color: lightcoral;
+      width: 50%;
     }
 
     .desc {
-      flex-grow: 1;
-      height: 550px;
-      background-color: aquamarine;
+      padding: 1rem 2.5rem;
+
+      width: 50%;
+      font-size: 1.2rem;
+
+      &__name {
+        color: $primary-color;
+        font-weight: bold;
+      }
     }
   }
 }
