@@ -2,6 +2,35 @@ import 'core-js';
 import 'regenerator-runtime/runtime';
 import $ from 'jquery';
 
+class Cards {
+  _cards = document.querySelector('.cards');
+  _card = document.querySelectorAll('.card');
+
+  constructor() {
+    this._rotateCard();
+    this._unRotateCard();
+  }
+
+  _unRotateCard() {
+    document.body.addEventListener('click', e => {
+      const card = e.target.closest('.card');
+      if (card) return;
+      this._card.forEach(card => card.classList.remove('rotate'));
+    });
+  }
+
+  _rotateCard() {
+    this._cards.addEventListener('click', e => {
+      const card = e.target.closest('.card');
+      if (!card) return;
+      if (!card.classList.contains('rotate'))
+        this._card.forEach(card => card.classList.remove('rotate'));
+      card.classList.toggle('rotate');
+    });
+  }
+}
+new Cards();
+
 class Navbar {
   sidebar = document.querySelector('.sidebar');
   navbar = document.querySelector('.navbar');

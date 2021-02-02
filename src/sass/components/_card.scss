@@ -8,8 +8,12 @@
     perspective: 1000px;
     background-color: transparent;
 
-    &:hover .card {
+    .rotate {
       transform: rotateY(180deg);
+    }
+
+    &:hover .card {
+      cursor: pointer;
     }
 
     .card {
@@ -29,11 +33,16 @@
         border-radius: 10px;
         padding: 1.7rem 2rem;
         text-align: center;
-        box-shadow: 3px 5px 10px rgba($color: #000000, $alpha: 0.25);
+        box-shadow: 3px 5px 10px rgba(#000000, 0.25);
+      }
+
+      &--front {
+        transition: all 0.5s ease;
 
         &__icon {
           font-size: 5rem;
           color: $primary-color;
+          transition: all 0.5s ease;
         }
 
         &__type {
@@ -52,6 +61,20 @@
           margin-top: 1rem;
           border-radius: 8px;
           color: $primary-color;
+          transition: all 0.5s ease;
+        }
+
+        &:hover {
+          color: $light-color;
+          background-color: $primary-color;
+
+          .card--front__details {
+            color: $light-color;
+          }
+
+          .card--front__icon {
+            color: $light-color;
+          }
         }
       }
 

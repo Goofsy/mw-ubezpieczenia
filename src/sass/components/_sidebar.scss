@@ -1,7 +1,7 @@
 .sidebar {
   position: fixed;
   z-index: 350;
-  background-color: $primary-color;
+  background-color: $medium-color;
   width: 63%;
   height: 100%;
   top: 0;
@@ -16,7 +16,7 @@
 
     &__item {
       padding: 0.7rem;
-      background-color: #2980b9;
+      background-color: #3498db;
       margin-bottom: 0.3rem;
 
       &--link {
