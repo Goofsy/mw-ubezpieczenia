@@ -1,4 +1,4 @@
-#header {
+#home {
   max-height: 100vh;
   height: 100vh;
   background: $bg-circles no-repeat 100% 0;
@@ -33,5 +33,9 @@
 
   .logo {
     padding-bottom: 1rem;
+  }
+
+  .hamburger {
+    padding-bottom: 0.4rem;
   }
 }
