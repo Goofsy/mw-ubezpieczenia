@@ -255,7 +255,7 @@ class SendEmail {
       input.classList.remove('form__group__input--filled');
     });
 
-    this._formInfo.innerHTML = 'Wiadomośc została wysłana';
+    this._formInfo.innerHTML = 'Wiadomość została wysłana';
 
     setTimeout(() => {
       this._formInfo.innerHTML = '';
