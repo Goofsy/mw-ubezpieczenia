@@ -27,3 +27,8 @@ body {
   opacity: 0;
   transform: translateX(100%);
 }
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(128px);
+}

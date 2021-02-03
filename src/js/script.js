@@ -69,11 +69,19 @@ class Navbar {
   smoothScroll = () => {
     $(document).on('click', 'a[href^="#"]', function (e) {
       e.preventDefault();
+      const sectionTarget = document.querySelector(
+        `#${this.href.split('#')[1]}`
+      );
+      const sectionIsHidden = sectionTarget.classList.contains(
+        'section--hidden'
+      );
       $('html, body').animate(
         {
-          scrollTop: $($.attr(this, 'href')).offset().top - 75,
+          scrollTop:
+            $($.attr(this, 'href')).offset().top -
+            `${sectionIsHidden ? 207 : 79}`,
         },
-        500
+        820
       );
     });
   };
@@ -81,7 +89,7 @@ class Navbar {
   stickyNavbar = () => {
     window.addEventListener('scroll', () => {
       const offerTopPosition = this.offer.getBoundingClientRect().top;
-      this.navbar.classList.toggle('sticky', offerTopPosition < 80);
+      this.navbar.classList.toggle('sticky', offerTopPosition <= 80);
     });
   };
 
@@ -253,6 +261,13 @@ class SendEmail {
 new SendEmail();
 
 class InfiniteSlider {
+  width = 0;
+  oldWidth = 0;
+  start = 0;
+  refresh = 0;
+  _prevStop = false;
+  _stop = false;
+  _oldTimestamp = 0;
   constructor(
     animTime = '14000',
     selector = '.slider',
@@ -260,14 +275,7 @@ class InfiniteSlider {
   ) {
     this.slider = document.querySelector(selector);
     this.container = document.querySelector(container);
-    this.width = 0;
-    this.oldWidth = 0;
     this.duration = parseInt(animTime);
-    this.start = 0;
-    this.refresh = 0;
-    this._prevStop = false;
-    this._stop = false;
-    this._oldTimestamp = 0;
   }
 
   animate() {
@@ -342,49 +350,10 @@ class InfiniteSlider {
     window.requestAnimationFrame(this.controlAnimation.bind(this));
     return;
   }
-
-  getIeWidth() {
-    this.slider.style.marginLeft = '-99999px';
-  }
-
-  ie11Fix() {
-    this.slider.querySelector('.slider-last').style.position = 'absolute';
-  }
-}
-
-function detectIE() {
-  var ua = window.navigator.userAgent;
-  var msie = ua.indexOf('MSIE ');
-
-  if (msie > 0) {
-    return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
-  }
-
-  var trident = ua.indexOf('Trident/');
-  if (trident > 0) {
-    var rv = ua.indexOf('rv:');
-    return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
-  }
-
-  var edge = ua.indexOf('Edge/');
-  if (edge > 0) {
-    return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
-  }
-
-  return false;
 }
 
 document.addEventListener('DOMContentLoaded', function () {
   const slider = new InfiniteSlider(20000);
-  const ie = detectIE();
-
-  if (ie !== false && ie < 10) {
-    slider.stagnate();
-    return;
-  }
-  if (ie !== false && ie < 12) {
-    slider.getIeWidth();
-  }
 
   slider.animate();
   document
@@ -393,10 +362,6 @@ document.addEventListener('DOMContentLoaded', function () {
   document
     .querySelector('#slider-container')
     .addEventListener('mouseleave', slider.go.bind(slider));
-
-  if (ie === 11) {
-    setTimeout(slider.ie11Fix.bind(slider), 1000);
-  }
 });
 
 class Map {
@@ -442,3 +407,31 @@ class Map {
   }
 }
 new Map();
+
+class RevealSections {
+  _allSections = document.querySelectorAll('.section');
+  _sectionObserver = new IntersectionObserver(this._revealSection, {
+    root: null,
+    threshold: 0.15,
+  });
+
+  constructor() {
+    this._observeSection();
+  }
+
+  _revealSection(entries, observer) {
+    const [entry] = entries;
+    if (!entry.isIntersecting) return;
+    entry.target.classList.remove('section--hidden');
+    observer.unobserve(entry.target);
+  }
+
+  _observeSection() {
+    this._allSections.forEach(section => {
+      this._sectionObserver.observe(section);
+      section.classList.add('section--hidden');
+    });
+  }
+}
+
+new RevealSections();
