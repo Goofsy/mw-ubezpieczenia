@@ -81,7 +81,7 @@ class Navbar {
             $($.attr(this, 'href')).offset().top -
             `${sectionIsHidden ? 207 : 79}`,
         },
-        820
+        850
       );
     });
   };
@@ -410,9 +410,10 @@ new Map();
 
 class RevealSections {
   _allSections = document.querySelectorAll('.section');
+  _windowWidth = window.innerWidth;
   _sectionObserver = new IntersectionObserver(this._revealSection, {
     root: null,
-    threshold: 0.15,
+    threshold: `${this._windowWidth > 680 ? 0.15 : 0.02}`,
   });
 
   constructor() {
@@ -427,6 +428,7 @@ class RevealSections {
   }
 
   _observeSection() {
+    this._windowWidth = window.innerWidth;
     this._allSections.forEach(section => {
       this._sectionObserver.observe(section);
       section.classList.add('section--hidden');
