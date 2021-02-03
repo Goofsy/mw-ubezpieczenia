@@ -94,6 +94,10 @@
       }
       &__box {
         display: block !important;
+
+        &:last-child {
+          margin-bottom: 13.5px !important;
+        }
       }
     }
     .open-hours {

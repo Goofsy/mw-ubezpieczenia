@@ -81,7 +81,7 @@ class Navbar {
             $($.attr(this, 'href')).offset().top -
             `${sectionIsHidden ? 207 : 79}`,
         },
-        850
+        900
       );
     });
   };

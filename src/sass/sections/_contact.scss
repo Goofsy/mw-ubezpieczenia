@@ -24,7 +24,11 @@
       .info__box {
         display: flex;
         align-items: center;
-        margin-bottom: 15px;
+        margin-bottom: 13.5px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
 
         i {
           width: 40px;
@@ -33,7 +37,7 @@
         }
 
         p {
-          margin-bottom: 5px;
+          margin-bottom: 3px;
           color: $dark-color;
           font-size: 1.1rem;
         }
@@ -52,7 +56,7 @@
   }
 
   .map-container {
-    height: 500px;
+    height: 472px;
 
     .map {
       width: 100%;

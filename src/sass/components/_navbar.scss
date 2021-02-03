@@ -10,8 +10,22 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+
+    .logo {
+      height: 80%;
+      width: 63px;
+      margin-bottom: 0.465rem;
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
     .hamburger {
       display: none;
+      padding-bottom: 0.25rem;
+      padding-right: 0.25rem;
       li {
         width: 35px;
         height: 5px;
