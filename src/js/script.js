@@ -379,7 +379,7 @@ class Map {
     '<div class="map__info">' +
     '<p>ul. Trinitatis 34a</p>' +
     '<p>32-700 Bochnia</p>' +
-    '<a class="map__info__link" href="https://www.google.com/maps/dir/Trinitatis+34A,+32-700+Bochnia//@49.9723755,20.4089502,17z/data=!4m9!4m8!1m5!1m1!1s0x47163b3fbafab067:0x6e2b3d0ecdaadcca!2m2!1d20.409036!2d49.972862!1m0!3e0">Wyznacz trasę</a>' +
+    '<a class="map__info__link" href="https://www.google.com/maps/dir//Trinitatis+34A,+32-700+Bochnia/@49.9728654,20.4068473,17z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x47163b3fbafab067:0x6e2b3d0ecdaadcca!2m2!1d20.409036!2d49.972862!3e0">Wyznacz trasę</a>' +
     '</div>';
 
   constructor() {
