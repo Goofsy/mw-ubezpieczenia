@@ -1,4 +1,4 @@
-﻿# MW-Ubezpieczenia
+# MW-Ubezpieczenia
 
 Official website of MW-Ubezpieczenia company.
 

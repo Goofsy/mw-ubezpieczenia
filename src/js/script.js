@@ -1,7 +1,7 @@
-import 'core-js/stable';
-import 'regenerator-runtime/runtime';
 import $ from 'jquery';
 import { Loader } from '@googlemaps/js-api-loader';
+import 'core-js';
+import 'regenerator-runtime/runtime';
 
 class Cards {
   _cards = document.querySelector('.cards');

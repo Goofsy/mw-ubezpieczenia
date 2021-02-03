@@ -2,10 +2,10 @@
   "name": "mw-ubezpieczenia",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.html",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html --dist-dir ./dist"
   },
   "author": "Dawid",
   "license": "ISC",
@@ -16,6 +16,7 @@
     "core-js": "^3.8.3",
     "jquery": "^3.5.1",
     "postcss-modules": "^4.0.0",
+    "regenerator-runtime": "^0.13.7",
     "sass": "^1.29.0"
   },
   "postcss": {
@@ -26,7 +27,6 @@
     }
   },
   "devDependencies": {
-    "node-sass": "^5.0.0",
     "parcel": "^2.0.0-beta.1"
   }
 }
