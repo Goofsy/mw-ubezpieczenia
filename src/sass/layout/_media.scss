@@ -1,16 +1,28 @@
 @media (max-width: 1020px) {
+  // #home .content {
+  //   .desc {
+  //     text-align: center;
+  //     width: 100%;
+
+  //     &__info {
+  //       max-width: none;
+  //     }
+  //   }
+
+  //   .img {
+  //     display: none;
+  //   }
+  // }
+
   #home .content {
     .desc {
-      text-align: center;
-      width: 100%;
+      &__title {
+        font-size: 40px;
+      }
 
       &__info {
-        max-width: none;
+        font-size: 1.2rem;
       }
-    }
-
-    .img {
-      display: none;
     }
   }
 
@@ -52,6 +64,26 @@
 }
 
 @media (max-width: 680px) {
+  #home .content {
+    .desc {
+      text-align: center;
+      width: 100%;
+
+      &__title {
+        font-size: 4rem;
+      }
+
+      &__info {
+        max-width: none;
+        font-size: 1.5rem;
+      }
+    }
+
+    .img {
+      display: none;
+    }
+  }
+
   #offer .cards {
     grid-template-areas:
       'card1' 'card2'

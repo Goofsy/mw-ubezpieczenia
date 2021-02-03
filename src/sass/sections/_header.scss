@@ -9,6 +9,7 @@
     flex-direction: row;
     align-items: center;
     padding: 100px 0;
+    overflow-wrap: break-word;
 
     .desc {
       width: 50%;
@@ -23,6 +24,7 @@
         overflow-wrap: break-word;
         margin: 1.5rem 3px;
         max-width: 31rem;
+        font-size: 1.5rem;
       }
     }
 
