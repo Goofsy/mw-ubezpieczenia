@@ -273,7 +273,7 @@ class InfiniteSlider {
   _stop = false;
   _oldTimestamp = 0;
   constructor(
-    animTime = '14000',
+    animTime = '10000',
     selector = '.slider',
     container = '#slider-container'
   ) {
@@ -357,7 +357,7 @@ class InfiniteSlider {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  const slider = new InfiniteSlider(20000);
+  const slider = new InfiniteSlider(25000);
 
   slider.animate();
   document
