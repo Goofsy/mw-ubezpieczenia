@@ -13,21 +13,3 @@ a {
 ul {
   list-style: none;
 }
-
-a:active,
-a:focus,
-a:hover {
-  outline: 0;
-  border: none;
-  -moz-outline-style: none;
-  box-shadow: none;
-}
-
-img:active,
-img:focus,
-img:hover {
-  outline: 0;
-  border: none;
-  -moz-outline-style: none;
-  box-shadow: none;
-}
