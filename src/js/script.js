@@ -164,7 +164,7 @@ class SendEmail {
         _inputNameValue === ''
       ) {
         this._inputName.classList.add('form__group__input--error');
-        throw new Error('Pole nie może byc puste!');
+        throw new Error('Pole nie może być puste!');
       }
 
       if (!this._validateEmailAddress(_inputEmailValue)) {
@@ -187,7 +187,7 @@ class SendEmail {
         _inputMessageValue === ''
       ) {
         this._inputMessage.classList.add('form__group__input--error');
-        throw new Error('Pole nie może byc puste!');
+        throw new Error('Pole nie może być puste!');
       }
 
       this._formSpinner.style.display = 'inline-block';
