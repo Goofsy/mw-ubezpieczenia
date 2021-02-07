@@ -30,7 +30,6 @@
     }
     .desc {
       width: 100%;
-      text-align: center;
       padding: 0;
     }
   }
@@ -49,22 +48,48 @@
 }
 
 @media (max-width: 680px) {
-  #home .content {
-    .desc {
-      width: 100%;
+  #home {
+    .navbar {
+      padding: 0.7rem;
+      height: 80px;
 
-      &__title {
-        font-size: 4rem;
+      .container {
+        padding: 0;
       }
 
-      &__info {
-        max-width: none;
-        font-size: 1.5rem;
+      .logo {
+        margin: 0;
+        height: 100%;
+        width: 56px;
+      }
+
+      .nav {
+        display: none;
+      }
+
+      .hamburger {
+        display: block;
+        margin-bottom: 0.25rem;
       }
     }
+    .content {
+      .desc {
+        width: 100%;
+        text-align: center;
 
-    .img {
-      display: none;
+        &__title {
+          font-size: 4rem;
+        }
+
+        &__info {
+          max-width: none;
+          font-size: 1.5rem;
+        }
+      }
+
+      .img {
+        display: none;
+      }
     }
   }
 
@@ -85,6 +110,12 @@
       .card--front__icon {
         color: $primary-color;
       }
+    }
+  }
+
+  #about {
+    .desc {
+      text-align: center !important;
     }
   }
 
@@ -129,32 +160,6 @@
 
     .map-container {
       height: 400px;
-    }
-  }
-
-  #home {
-    .navbar {
-      padding: 0.7rem;
-      height: 80px;
-
-      .container {
-        padding: 0;
-      }
-
-      .logo {
-        margin: 0;
-        height: 100%;
-        width: 56px;
-      }
-
-      .nav {
-        display: none;
-      }
-
-      .hamburger {
-        display: block;
-        margin-bottom: 0.25rem;
-      }
     }
   }
 }
