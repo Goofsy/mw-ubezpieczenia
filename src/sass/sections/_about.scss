@@ -20,6 +20,11 @@
       padding: 1rem 2.5rem;
       width: 50%;
       font-size: 1.2rem;
+      text-align: justify;
+
+      &__header {
+        margin-bottom: 0.5rem;
+      }
 
       &__name {
         color: $primary-color;

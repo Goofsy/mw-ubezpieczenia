@@ -1,19 +1,4 @@
 @media (max-width: 1020px) {
-  // #home .content {
-  //   .desc {
-  //     text-align: center;
-  //     width: 100%;
-
-  //     &__info {
-  //       max-width: none;
-  //     }
-  //   }
-
-  //   .img {
-  //     display: none;
-  //   }
-  // }
-
   #home .content {
     .desc {
       &__title {
@@ -66,7 +51,6 @@
 @media (max-width: 680px) {
   #home .content {
     .desc {
-      text-align: center;
       width: 100%;
 
       &__title {
