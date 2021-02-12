@@ -4,7 +4,7 @@
 
   .card-container {
     position: relative;
-    height: 395px;
+    height: 385px;
     perspective: 1000px;
     background-color: transparent;
 
@@ -38,6 +38,8 @@
 
       &--front {
         transition: all 0.5s ease;
+        display: flex;
+        flex-direction: column;
 
         &__icon {
           font-size: 5rem;
@@ -58,10 +60,11 @@
 
         &__details {
           font-size: 1.4rem;
-          margin-top: 1rem;
+          margin-top: auto;
           border-radius: 8px;
           color: $primary-color;
           transition: all 0.5s ease;
+          justify-self: center;
         }
 
         &:hover {
@@ -82,18 +85,19 @@
         background-color: $primary-color;
         color: $light-color;
         text-align: start;
+        padding: 1.4rem 2rem;
 
         transform: rotateY(180deg);
 
         &__title {
-          font-size: 1.4rem;
+          font-size: 1.31rem;
           font-weight: 500;
-          margin-bottom: 1rem;
+          margin-bottom: 0.8rem;
         }
 
         &__types {
           list-style: square;
-          font-size: 1.1rem;
+          font-size: 1rem;
         }
       }
     }
