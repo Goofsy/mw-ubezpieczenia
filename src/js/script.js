@@ -76,9 +76,8 @@ class Navbar {
       const sectionTarget = document.querySelector(
         `#${this.href.split('#')[1]}`
       );
-      const sectionIsHidden = sectionTarget.classList.contains(
-        'section--hidden'
-      );
+      const sectionIsHidden =
+        sectionTarget.classList.contains('section--hidden');
       $('html, body').animate(
         {
           scrollTop:
@@ -441,3 +440,55 @@ class RevealSections {
 }
 
 new RevealSections();
+
+// Modal
+class Modal {
+  _modal = document.querySelector('.modal');
+  _modalContent = document.querySelector('.modal__content');
+  _modalContentList = document.querySelector('.modal__content__list');
+  _modalContentHeader = document.querySelector('.modal__content__header');
+  _btnOpen = document.querySelector('.btn__open--modal');
+  _btnClose = document.querySelector('.btn__exit--modal');
+  _modalOverlay = document.querySelector('.modal--overlay');
+  constructor() {
+    this._openModalBtnHandler();
+    this._closeModalBtnHandler();
+    this._closeModalOverlayHandler();
+    this._closeModalEscHandler();
+  }
+
+  _openModalBtnHandler() {
+    this._btnOpen.addEventListener('click', () => {
+      this._modal.style.visibility = 'visible';
+      this._modalContent.style.height = '600px';
+      this._modalOverlay.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+      this._modalContentList.style.visibility = 'visible';
+      this._modalContentHeader.style.visibility = 'visible';
+      document.body.style.overflow = 'hidden';
+    });
+  }
+
+  _closeModalBtnHandler() {
+    this._btnClose.addEventListener('click', () => this._closeModal());
+  }
+
+  _closeModalOverlayHandler() {
+    this._modalOverlay.addEventListener('click', () => this._closeModal());
+  }
+
+  _closeModalEscHandler() {
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' || e.key === 'Esc') this._closeModal();
+    });
+  }
+
+  _closeModal() {
+    this._modal.style.visibility = 'hidden';
+    this._modalContent.style.height = '0px';
+    this._modalOverlay.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+    this._modalContentList.style.visibility = 'hidden';
+    this._modalContentHeader.style.visibility = 'hidden';
+    document.body.style.overflow = 'auto';
+  }
+}
+new Modal();
