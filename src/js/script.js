@@ -2,6 +2,8 @@ import $ from 'jquery';
 import { Loader } from '@googlemaps/js-api-loader';
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
+import dotenv from 'dotenv';
+dotenv.config();
 
 class Cards {
   _cards = document.querySelector('.cards');
@@ -235,8 +237,8 @@ class SendEmail {
   _sendEmail(name, email, phone, message) {
     try {
       return Email.send({
-        SecureToken: '1b17ee09-4190-4d7c-bd83-efeb38674305',
-        To: 'dawid.stud@gmail.com',
+        SecureToken: process.env.EMAIL_SECURE_TOKEN,
+        To: process.env.EMAIL_TO,
         From: email,
         Subject: 'E-mail ze stronki',
         Body: `${name}, tel: ${phone}, Wiadomość: ${message}`,
@@ -369,7 +371,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 class Map {
   loader = new Loader({
-    apiKey: 'AIzaSyBjQKGHd-2F-00gM3vx-ugMwafHitZjzdg',
+    apiKey: process.env.GOOGLE_MAP_API_KEY,
     version: 'weekly',
   });
   map;
@@ -404,8 +406,6 @@ class Map {
       marker.addListener('click', () => {
         infowindow.open(this.map, marker);
       });
-
-      infowindow.open(this.map, marker);
     });
   }
 }

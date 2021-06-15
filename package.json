@@ -14,6 +14,7 @@
     "@googlemaps/js-api-loader": "^1.11.1",
     "autoprefixer": "^9.3.1",
     "core-js": "^3.8.3",
+    "dotenv": "^5.0.1",
     "jquery": "^3.5.1",
     "postcss-modules": "^4.0.0",
     "sass": "^1.29.0"
