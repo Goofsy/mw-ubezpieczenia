@@ -523,6 +523,7 @@ class Popup {
   _closePopupBtnHandler() {
     this._closePopupBtn.addEventListener('click', () => {
       this._popup.style.display = 'none';
+      Cookies.set('acceptedCookies', 'true');
     });
   }
 }
