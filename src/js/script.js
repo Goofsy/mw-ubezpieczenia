@@ -463,7 +463,7 @@ class Modal {
   _openModalBtnHandler() {
     this._btnOpen.addEventListener('click', () => {
       this._modal.style.visibility = 'visible';
-      this._modalContent.style.height = '323px';
+      this._modalContent.style.height = 'auto';
       this._modalOverlay.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
       this._modalContentList.style.visibility = 'visible';
       this._modalContentHeader.style.visibility = 'visible';
