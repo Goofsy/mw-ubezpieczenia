@@ -2,6 +2,9 @@ import $ from 'jquery';
 import { Loader } from '@googlemaps/js-api-loader';
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
+import Cookies from 'js-cookie';
 import dotenv from 'dotenv';
 dotenv.config();
 
@@ -460,7 +463,7 @@ class Modal {
   _openModalBtnHandler() {
     this._btnOpen.addEventListener('click', () => {
       this._modal.style.visibility = 'visible';
-      this._modalContent.style.height = '600px';
+      this._modalContent.style.height = '367px';
       this._modalOverlay.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
       this._modalContentList.style.visibility = 'visible';
       this._modalContentHeader.style.visibility = 'visible';
@@ -492,3 +495,35 @@ class Modal {
   }
 }
 new Modal();
+
+class Popup {
+  _popup = document.querySelector('.popup');
+  _acceptPopupBtn = document.querySelector('.btn__accept--popup');
+  _closePopupBtn = document.querySelector('.btn__close--popup');
+
+  constructor() {
+    this._acceptPopupBtnHandler();
+    this._checkIfAcceptedCookies();
+    this._closePopupBtnHandler();
+  }
+
+  _checkIfAcceptedCookies() {
+    if (Cookies.get('acceptedCookies') !== 'true') {
+      this._popup.style.display = 'flex';
+    }
+  }
+
+  _acceptPopupBtnHandler() {
+    this._acceptPopupBtn.addEventListener('click', () => {
+      this._popup.style.display = 'none';
+      Cookies.set('acceptedCookies', 'true');
+    });
+  }
+
+  _closePopupBtnHandler() {
+    this._closePopupBtn.addEventListener('click', () => {
+      this._popup.style.display = 'none';
+    });
+  }
+}
+new Popup();

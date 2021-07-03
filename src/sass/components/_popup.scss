@@ -1,0 +1,17 @@
+.popup {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: $dark-color;
+  color: $light-color;
+  height: 60px;
+  z-index: 1000;
+  display: none;
+  justify-items: center;
+  align-items: center;
+
+  &--text {
+    width: 100%;
+    text-align: center;
+  }
+}

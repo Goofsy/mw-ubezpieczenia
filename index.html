@@ -18,12 +18,19 @@
     <script defer src="src/js/script.js"></script>
   </head>
   <body>
+    <div class="popup">
+      <p class="popup--text">Ta strona korzysta z ciasteczek aby świadczyć usługi na najwyższym poziomie. Dalsze korzystanie ze strony oznacza, że zgadzasz się na ich użycie.
+      <button class="btn btn--primary  btn__accept--popup">Zgoda</button>
+    </p>
+    <button class="btn__close--popup">x</button>
+
+    </div>
     <header id="home">
       <nav class="navbar">
         <div class="container">
           <div class="logo">
             <a href="#home">
-              <img src="./src/images/mw-logo.svg"/>
+              <img class=""  src="./src/images/mw-logo.svg"/>
             </a>
           </div>
           <ul class="hamburger">
@@ -254,7 +261,7 @@
       <div class="subtitle">O nas</div>
       <div class="container">
         <div class="content">
-          <img src="./src/images/bg-about.svg" class="img" alt="bg-about">
+          <img src="./src/images/bg-about.svg" class="img " alt="bg-about">
           <div class="desc">
             <p class="desc__header">Zakup ubezpieczenia to bardzo ważny moment, gdyż decydujemy o bezpieczeństwie naszego życia i majątku. W gąszczu informacji i ogromie dostępnych na rynku produktów ubezpieczeniowych, ciężko wybrać tę najlepszą opcję. Skomplikowane zasady i specjalistyczne terminy często wymagają wyjaśnienia oraz wsparcia specjalisty.</p>
             <p><span class="desc__name">MW Ubezpieczenia</span> to agencja, która świadczy kompleksowe doradztwo ubezpieczeniowe w zakresie dopasowania polis do indywidualnych potrzeb. Proponujemy ochronę zdrowia, życia oraz mienia czy też bezpieczeństwo w podróży. Nasza oferta skierowana jest do firm i osób prywatnych.</p>
@@ -374,7 +381,7 @@
             <button class="btn__exit--modal">x</button>
             <ul class="modal__content__list">
               <li>
-                <a href="./src/forms/Oswiadczenie z miejsca wypadku.pdf" download><span>Oświadczenie z miejsca wypadku</span>  <img src="./src/images/pdf.svg" alt="W3Schools"></a>
+                <a href="./src/forms/Oswiadczenie z miejsca wypadku.pdf" download><span>Oświadczenie z miejsca wypadku</span>  <img src="./src/images/pdf.svg" class="" alt="W3Schools"></a>
               </li>
               <li>
                 <a href="./src/forms/Oswiadczenie-sprawcy-kolizji ++.pdf" download><span>Oświadczenie sprawcy kolizji</span>  <img src="./src/images/pdf.svg" alt="W3Schools"></a>
@@ -405,6 +412,7 @@
         </div>
         </div>
       </div>
+    
     </footer>
   </body>
 </html>
