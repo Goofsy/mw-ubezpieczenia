@@ -243,7 +243,7 @@ class SendEmail {
         SecureToken: process.env.EMAIL_SECURE_TOKEN,
         To: process.env.EMAIL_TO,
         From: email,
-        Subject: 'E-mail ze stronki',
+        Subject: 'E-mail ze stronki mw-ubezpieczenia',
         Body: `${name}, tel: ${phone}, Wiadomość: ${message}`,
       });
     } catch (err) {
@@ -495,6 +495,57 @@ class Modal {
   }
 }
 new Modal();
+
+class Modal2 {
+  _modal = document.querySelector('.modal2');
+  _modalContent = document.querySelector('.modal2__content');
+  _modalContentList = document.querySelector('.modal2__content__list');
+  _modalContentHeader = document.querySelector('.modal2__content__header');
+  _btnOpen = document.querySelector('.btn__open--modal2');
+  _btnClose = document.querySelector('.btn__exit--modal2');
+  _modalOverlay = document.querySelector('.modal2--overlay');
+  constructor() {
+    this._openModalBtnHandler();
+    this._closeModalBtnHandler();
+    this._closeModalOverlayHandler();
+    this._closeModalEscHandler();
+  }
+
+  _openModalBtnHandler() {
+    this._btnOpen.addEventListener('click', () => {
+      this._modal.style.visibility = 'visible';
+      this._modalContent.style.height = 'auto';
+      this._modalOverlay.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+      this._modalContentList.style.visibility = 'visible';
+      this._modalContentHeader.style.visibility = 'visible';
+      document.body.style.overflow = 'hidden';
+    });
+  }
+
+  _closeModalBtnHandler() {
+    this._btnClose.addEventListener('click', () => this._closeModal());
+  }
+
+  _closeModalOverlayHandler() {
+    this._modalOverlay.addEventListener('click', () => this._closeModal());
+  }
+
+  _closeModalEscHandler() {
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' || e.key === 'Esc') this._closeModal();
+    });
+  }
+
+  _closeModal() {
+    this._modal.style.visibility = 'hidden';
+    this._modalContent.style.height = '0px';
+    this._modalOverlay.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+    this._modalContentList.style.visibility = 'hidden';
+    this._modalContentHeader.style.visibility = 'hidden';
+    document.body.style.overflow = 'auto';
+  }
+}
+new Modal2();
 
 class Popup {
   _popup = document.querySelector('.popup');
