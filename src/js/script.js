@@ -5,8 +5,6 @@ import 'regenerator-runtime/runtime';
 import 'lazysizes';
 import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import Cookies from 'js-cookie';
-import dotenv from 'dotenv';
-dotenv.config();
 
 class Cards {
   _cards = document.querySelector('.cards');
@@ -240,8 +238,8 @@ class SendEmail {
   _sendEmail(name, email, phone, message) {
     try {
       return Email.send({
-        SecureToken: process.env.EMAIL_SECURE_TOKEN,
-        To: process.env.EMAIL_TO,
+        SecureToken: '7cd8f1c7-db27-4ee4-8440-380629e2ea76',
+        To: 'biuro@mwubezpieczenia.com',
         From: email,
         Subject: 'E-mail ze stronki mw-ubezpieczenia',
         Body: `${name}, tel: ${phone}, Wiadomość: ${message}`,
@@ -374,7 +372,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 class Map {
   loader = new Loader({
-    apiKey: process.env.GOOGLE_MAP_API_KEY,
+    apiKey: 'AIzaSyBjQKGHd-2F-00gM3vx-ugMwafHitZjzdg',
     version: 'weekly',
   });
   map;
