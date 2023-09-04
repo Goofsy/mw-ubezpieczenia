@@ -6,4 +6,4 @@ Go Live! https://mw-ubezpieczenia.netlify.app/
 
 My second commercial project as a freelancer.
 
-IN PROGRESS.
+https://mwubezpieczenia.com/
